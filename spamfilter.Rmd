@@ -252,7 +252,7 @@ train %>% mutate(pred= map_chr(sms, classifier)) -> train
 acc <- (cm[1] + cm[4]) / sum(cm)
 ```
 
-The accuracy of the classifier is `r sprintf('%.2f%%',acc)`.
+The accuracy of the classifier is `r sprintf('%.2f%%',acc*100)`.
 We can probably improve the model with hyper parameter tuning.
 
 ## Alpha tuning
